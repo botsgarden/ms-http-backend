@@ -16,7 +16,6 @@ app.put('/update/:registration', (req, res) => {
   let index = services.indexOf(service)
   services[index] = req.body
   console.log("Services updated", services[index])
-
   res.end()
 })
 
@@ -31,7 +30,6 @@ app.get('/records', (req, res) => {
 })
 
 app.post('/register', (req, res) => {
-  //console.log("req.headers", req.headers)
   let serviceInformations = req.body
   services.push(serviceInformations)
   console.log("🐼 New service added", serviceInformations)
